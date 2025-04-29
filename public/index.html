@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container" id="loginContainer">
+            <h1>Simple Chat App</h1>
+            <div class="input-group">
+                <input type="text" id="usernameInput" placeholder="Enter your username">
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+
+        <div class="chat-container hidden" id="chatContainer">
+            <div class="sidebar">
+                <div class="current-user">
+                    <h3>Logged in as: <span id="currentUsername"></span></h3>
+                </div>
+                <div class="user-list">
+                    <h3>Online Users</h3>
+                    <ul id="userList"></ul>
+                </div>
+                <div class="friend-list">
+                    <h3>Friends</h3>
+                    <p class="helper-text">Click on a friend to start chatting</p>
+                    <ul id="friendList"></ul>
+                </div>
+                <div class="add-friend">
+                    <input type="text" id="friendUsernameInput" placeholder="Username to add">
+                    <button id="addFriendBtn">Add Friend</button>
+                </div>
+            </div>
+            <div class="chat-area">
+                <div class="chat-header">
+                    <h3>Chat with: <span id="chatWith">Select a friend</span></h3>
+                </div>
+                <div class="messages" id="messagesContainer">
+                    <div class="no-messages-selected" id="noMessagesPlaceholder">
+                        Add a friend and select them from the list to start chatting
+                    </div>
+                </div>
+                <div class="message-input">
+                    <input type="text" id="messageInput" placeholder="Type a message..." disabled>
+                    <button id="sendBtn" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add this to ensure the message input resets properly if it's stuck
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const messageInput = document.getElementById('messageInput');
+                if (messageInput) {
+                    // Force reset any browser-cached state
+                    messageInput.disabled = true;
+                    messageInput.value = '';
+                }
+            }, 500);
+        });
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
