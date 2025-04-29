@@ -13,11 +13,11 @@ A real-time chat application built with Node.js and Socket.io for a Computer Net
 
 ## Computer Network Concepts Demonstrated
 
-- **WebSockets**: Bidirectional communication channel between client and server
-- **Real-time Data Transfer**: Messages are sent and received instantly
-- **Connection Management**: Handling client connections and disconnections
-- **Peer-to-Peer Communication**: Direct messaging between users
-- **Network Status Detection**: Online/offline status monitoring
+- WebSockets: Bidirectional communication channel between client and server
+- Real-time Data Transfer: Messages are sent and received instantly
+- Connection Management: Handling client connections and disconnections
+- Peer-to-Peer Communication: Direct messaging between users
+- Network Status Detection: Online/offline status monitoring
 
 ## Installation
 
@@ -30,14 +30,7 @@ npm install
 ```
 npm start
 ```
-4. Access the application at `http://localhost:3000`
-
-## Development Mode
-
-To run the server in development mode with automatic restart on file changes:
-```
-npm run dev
-```
+4. Access the application at `http://localhost:3002`
 
 ## How to Use
 

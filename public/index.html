@@ -53,12 +53,10 @@
     </div>
 
     <script>
-        // Add this to ensure the message input resets properly if it's stuck
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const messageInput = document.getElementById('messageInput');
                 if (messageInput) {
-                    // Force reset any browser-cached state
                     messageInput.disabled = true;
                     messageInput.value = '';
                 }
