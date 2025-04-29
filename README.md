@@ -32,6 +32,10 @@ npm start
 ```
 4. Access the application at `http://localhost:3002`
 
+## Deployment
+
+This application is configured for easy deployment on Render.com.
+
 ## How to Use
 
 1. Open the application in your browser
